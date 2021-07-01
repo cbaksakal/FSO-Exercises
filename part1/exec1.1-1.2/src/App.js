@@ -18,7 +18,6 @@ const Part = (props) => {
 }
 
 const Content = (props) => {
-  console.log(props)
   const [part1, part2, part3] = props.course.parts
   return (
     <div>
