@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const Header = (props) => {
   return (
@@ -8,12 +8,18 @@ const Header = (props) => {
   )
 }
 
+const Part = (props) => {
+  return (
+    <p>{props.name} {props.count} </p>
+  )
+}
+
 const Content = (props) => {
   return (
     <div>
-      <p>{props.part1} {props.ex1} </p>
-      <p>{props.part2} {props.ex2} </p>
-      <p>{props.part3} {props.ex3} </p>
+      <Part name={props.part1} count={props.ex1} />
+      <Part name={props.part2} count={props.ex2} />
+      <Part name={props.part3} count={props.ex3} />
     </div>
   )
 }
@@ -37,8 +43,8 @@ const App = () => {
     <div>
       <Header course={course} />
       <Content part1={part1} ex1={exercises1}
-      part2={part2} ex2={exercises2}
-      part3={part3} ex3={exercises3} />
+        part2={part2} ex2={exercises2}
+        part3={part3} ex3={exercises3} />
       <Total ex1={exercises1} ex2={exercises2} ex3={exercises3} />
     </div>
   )
